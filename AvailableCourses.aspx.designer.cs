@@ -11,7 +11,7 @@ namespace Gucera
 {
 
 
-    public partial class StudentHome
+    public partial class AvailableCourses
     {
 
         /// <summary>
@@ -24,30 +24,12 @@ namespace Gucera
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// viewMyProfile control.
+        /// GridView1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button viewMyProfile;
-
-        /// <summary>
-        /// viewAvailableCourses control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button viewAvailableCourses;
-
-        /// <summary>
-        /// addCreditCard control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button addCreditCard;
+        protected global::System.Web.UI.WebControls.GridView GridView1;
     }
 }

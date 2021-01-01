@@ -11,7 +11,7 @@ namespace Gucera
 {
 
 
-    public partial class StudentHome
+    public partial class CreditCard
     {
 
         /// <summary>
@@ -24,30 +24,48 @@ namespace Gucera
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// viewMyProfile control.
+        /// number control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button viewMyProfile;
+        protected global::System.Web.UI.WebControls.TextBox number;
 
         /// <summary>
-        /// viewAvailableCourses control.
+        /// holderName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button viewAvailableCourses;
+        protected global::System.Web.UI.WebControls.TextBox holderName;
 
         /// <summary>
-        /// addCreditCard control.
+        /// date control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button addCreditCard;
+        protected global::System.Web.UI.WebControls.TextBox date;
+
+        /// <summary>
+        /// cvv control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox cvv;
+
+        /// <summary>
+        /// AddCreditCard control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button AddCreditCard;
     }
 }

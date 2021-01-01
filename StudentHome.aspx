@@ -4,12 +4,42 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Home</title>
+    <style type="text/css">
+        .auto-style1 {
+            position: absolute;
+            top: 87px;
+            left: 263px;
+            z-index: 1;
+            width: 248px;
+            height: 45px;
+        }
+        .auto-style2 {
+            position: absolute;
+            top: 158px;
+            left: 264px;
+            z-index: 1;
+            width: 248px;
+            height: 46px;
+        }
+        .auto-style3 {
+            position: absolute;
+            top: 240px;
+            left: 267px;
+            z-index: 1;
+            width: 248px;
+            height: 45px;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
+        <div style="font-size: xx-large; font-family: 'Arial Black'; color: #000080;">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Student Home
         </div>
+        <asp:Button ID="viewMyProfile" runat="server" CssClass="auto-style1" ForeColor="#000099" Text="View my profile" OnClick="viewMyProfile_Click" />
+        <asp:Button ID="viewAvailableCourses" runat="server" CssClass="auto-style2" ForeColor="#000099" Text="View Avaliable Courses" OnClick="viewAvailableCourses_Click" />
+        <asp:Button ID="addCreditCard" runat="server" CssClass="auto-style3" ForeColor="#000099" OnClick="addCreditCard_Click" Text="Add Credit Card" />
     </form>
 </body>
 </html>

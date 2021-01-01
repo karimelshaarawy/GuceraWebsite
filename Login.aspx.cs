@@ -35,6 +35,7 @@ namespace Gucera
             conn.Close();
             if (success.Value.ToString() == "1")
             {
+                Session["user"] = id;
                 if (type.Value.ToString() == "2")
                     Response.Redirect("StudentHome.aspx");
                 else if (type.Value.ToString() == "0")
