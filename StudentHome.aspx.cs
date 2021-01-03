@@ -32,5 +32,19 @@ namespace Gucera
         {
             Response.Redirect("CreditCard.aspx");
         }
+
+        protected void viewAssignment_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("viewAssignment.aspx");
+        }
+
+        
+
+        protected void submitAssignment_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("submitAssign.aspx");
+        }
+
+       
     }
 }

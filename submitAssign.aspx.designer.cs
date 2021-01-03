@@ -11,7 +11,7 @@ namespace Gucera
 {
 
 
-    public partial class StudentHome
+    public partial class submitAssign
     {
 
         /// <summary>
@@ -24,48 +24,48 @@ namespace Gucera
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// viewMyProfile control.
+        /// assignmentType control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button viewMyProfile;
+        protected global::System.Web.UI.WebControls.TextBox assignmentType;
 
         /// <summary>
-        /// viewAvailableCourses control.
+        /// assignmentNumber control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button viewAvailableCourses;
+        protected global::System.Web.UI.WebControls.TextBox assignmentNumber;
 
         /// <summary>
-        /// addCreditCard control.
+        /// submitButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button addCreditCard;
+        protected global::System.Web.UI.WebControls.Button submitButton;
 
         /// <summary>
-        /// viewAssignment control.
+        /// courseId control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button viewAssignment;
+        protected global::System.Web.UI.WebControls.TextBox courseId;
 
         /// <summary>
-        /// submitAssignment control.
+        /// Label1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button submitAssignment;
+        protected global::System.Web.UI.WebControls.Label Label1;
     }
 }

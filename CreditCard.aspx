@@ -8,41 +8,47 @@
     <style type="text/css">
         .auto-style1 {
             position: absolute;
-            top: 70px;
-            left: 148px;
+            top: 221px;
+            left: 151px;
             z-index: 1;
         }
         .auto-style2 {
             position: absolute;
-            top: 108px;
-            left: 147px;
+            top: 260px;
+            left: 151px;
             z-index: 1;
         }
         .auto-style3 {
             position: absolute;
-            top: 146px;
-            left: 149px;
+            top: 296px;
+            left: 151px;
             z-index: 1;
         }
         .auto-style4 {
             position: absolute;
-            top: 184px;
+            top: 333px;
             left: 148px;
             z-index: 1;
         }
         .auto-style5 {
             position: absolute;
-            top: 244px;
-            left: 115px;
+            top: 374px;
+            left: 112px;
             z-index: 1;
             width: 70px;
         }
     </style>
 </head>
-    <h1>Add Credit Card</h1>
+    <h1>&nbsp;</h1>
+<h1>Add Credit Card</h1>
 <body>
     <form id="form1" runat="server">
         <div>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
             Credit card number
             <asp:TextBox ID="number" runat="server" CssClass="auto-style1"></asp:TextBox>
             <br />
@@ -51,7 +57,7 @@
             <asp:TextBox ID="holderName" runat="server" CssClass="auto-style2"></asp:TextBox>
             <br />
             <br />
-            Expiry date (Y/M/D)<asp:TextBox ID="date" runat="server" CssClass="auto-style3"></asp:TextBox>
+            Expiry date (Y/M/D)<asp:TextBox ID="date" runat="server" CssClass="auto-style3" TextMode="Date"></asp:TextBox>
             <br />
             <br />
             CVV

@@ -69,10 +69,13 @@
   <ItemGroup>
     <Content Include="AvailableCourses.aspx" />
     <Content Include="CreditCard.aspx" />
+    <Content Include="dark.css" />
     <Content Include="Login.aspx" />
     <Content Include="MyProfile.aspx" />
     <Content Include="Register.aspx" />
     <Content Include="StudentHome.aspx" />
+    <Content Include="submitAssign.aspx" />
+    <Content Include="viewAssignment.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -118,6 +121,20 @@
     </Compile>
     <Compile Include="StudentHome.aspx.designer.cs">
       <DependentUpon>StudentHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="submitAssign.aspx.cs">
+      <DependentUpon>submitAssign.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="submitAssign.aspx.designer.cs">
+      <DependentUpon>submitAssign.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="viewAssignment.aspx.cs">
+      <DependentUpon>viewAssignment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="viewAssignment.aspx.designer.cs">
+      <DependentUpon>viewAssignment.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

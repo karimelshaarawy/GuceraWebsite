@@ -11,7 +11,7 @@ namespace Gucera
 {
 
 
-    public partial class StudentHome
+    public partial class viewAssignment
     {
 
         /// <summary>
@@ -24,48 +24,30 @@ namespace Gucera
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// viewMyProfile control.
+        /// assignment control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button viewMyProfile;
+        protected global::System.Web.UI.WebControls.GridView assignment;
 
         /// <summary>
-        /// viewAvailableCourses control.
+        /// courseID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button viewAvailableCourses;
+        protected global::System.Web.UI.WebControls.TextBox courseID;
 
         /// <summary>
-        /// addCreditCard control.
+        /// IDenter control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button addCreditCard;
-
-        /// <summary>
-        /// viewAssignment control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button viewAssignment;
-
-        /// <summary>
-        /// submitAssignment control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button submitAssignment;
+        protected global::System.Web.UI.WebControls.Button IDenter;
     }
 }
