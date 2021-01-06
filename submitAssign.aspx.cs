@@ -46,18 +46,31 @@ namespace Gucera
         {
             string connstr = WebConfigurationManager.ConnectionStrings["gucera"].ToString();
             SqlConnection conn = new SqlConnection(connstr);
-            int cid = Int16.Parse(courseId.Text);
+            
+               
+            
+            int cid1 = Int16.Parse(courseId.Text);
             string assignType = assignmentType.Text;
             int assignNumber = Int16.Parse(assignmentNumber.Text);
-            int sid = (int)Session["user"];
+            int sid1 = (int)Session["user"];
             SqlCommand submitproc = new SqlCommand("submitAssign", conn);
             submitproc.Parameters.Add(new SqlParameter("@assignType", assignType));
             submitproc.Parameters.Add(new SqlParameter("@assignNumber", assignNumber));
-            submitproc.Parameters.Add(new SqlParameter("@cid", cid));
-            submitproc.Parameters.Add(new SqlParameter("@sid", sid));
+            submitproc.Parameters.Add(new SqlParameter("@cid", cid1));
+            submitproc.Parameters.Add(new SqlParameter("@sid", sid1));
             submitproc.CommandType = CommandType.StoredProcedure;
+            int result = 0;
+            SqlCommand cmd = new SqlCommand("select count(*) from studentTakeAssignment  where cid=cid1 and sid=sid1 ", conn);
+               cmd.Parameters.AddWithValue("@cid", cid1);
+            result = (int)cmd.ExecuteScalar();
             conn.Open();
+            
+            
+            if (result ==0)
+                Response.Write("not enrolled in course");
+            else
             submitproc.ExecuteNonQuery();
+
             conn.Close();
 
         }

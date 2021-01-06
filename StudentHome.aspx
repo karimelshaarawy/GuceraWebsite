@@ -46,12 +46,29 @@
             width: 250px;
             height: 45px;
         }
+        .auto-style6 {
+            position: absolute;
+            top: 88px;
+            left: 551px;
+            z-index: 1;
+            width: 249px;
+            height: 45px;
+            bottom: 78px;
+        }
+        .auto-style7 {
+            position: absolute;
+            top: 157px;
+            left: 550px;
+            z-index: 1;
+            width: 248px;
+            height: 44px;
+        }
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
-        <div style="font-size: xx-large; font-family: 'Arial Black'; color: #000080;">
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Student Home
+        <div align="center" style="font-size: xx-large; font-family: 'Arial Black'; color: #000080;">
+         Student Home
         </div>
         <asp:Button ID="viewMyProfile" runat="server" CssClass="auto-style1" ForeColor="#000099" Text="View my profile" OnClick="viewMyProfile_Click" />
         <asp:Button ID="viewAvailableCourses" runat="server" CssClass="auto-style2" ForeColor="#000099" Text="View Avaliable Courses" OnClick="viewAvailableCourses_Click" />
@@ -62,6 +79,9 @@
             <asp:Button ID="submitAssignment" runat="server" CssClass="auto-style5" ForeColor="#000066" Text="Submit Assignment" OnClick="submitAssignment_Click" />
         </p>
 
+        <asp:Button ID="viewPromocode" runat="server" CssClass="auto-style6" ForeColor="#000099" OnClick="viewPromocode_Click" Text="View Promocodes" />
+
+        <asp:Button ID="enrollInCourse" runat="server" CssClass="auto-style7" ForeColor="#000099" OnClick="enrollInCourse_Click" Text="Enroll in Course" />
     </form>
 </body>
 </html>

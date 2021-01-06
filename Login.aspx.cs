@@ -20,8 +20,14 @@ namespace Gucera
         {
             string connstr = WebConfigurationManager.ConnectionStrings["gucera"].ToString();
             SqlConnection conn = new SqlConnection(connstr);
-            int id = Int16.Parse(username.Text);
-            string pass = password.Text;
+            int id =0;
+            string pass="";
+            try
+            {
+                 id = Int16.Parse(username.Text);
+                 pass = password.Text;
+            }
+            catch (Exception) { Label1.Text = "Wrong username or password "; return; }
             SqlCommand loginProc = new SqlCommand("userlogin", conn);
             loginProc.CommandType = System.Data.CommandType.StoredProcedure;
             loginProc.Parameters.Add(new SqlParameter("@id", id));
@@ -45,7 +51,7 @@ namespace Gucera
             }
             else
             {
-                Response.Write("Wrong username or password ");
+                Label1.Text= "Wrong username or password ";
             }
 
 

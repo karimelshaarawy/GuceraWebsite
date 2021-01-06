@@ -69,12 +69,14 @@
   <ItemGroup>
     <Content Include="AvailableCourses.aspx" />
     <Content Include="CreditCard.aspx" />
-    <Content Include="dark.css" />
+    <Content Include="EnrollInCourse.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="MyProfile.aspx" />
+    <Content Include="Promocode.aspx" />
     <Content Include="Register.aspx" />
     <Content Include="StudentHome.aspx" />
     <Content Include="submitAssign.aspx" />
+    <Content Include="viewAssignGrade.aspx" />
     <Content Include="viewAssignment.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -93,6 +95,13 @@
     <Compile Include="CreditCard.aspx.designer.cs">
       <DependentUpon>CreditCard.aspx</DependentUpon>
     </Compile>
+    <Compile Include="EnrollInCourse.aspx.cs">
+      <DependentUpon>EnrollInCourse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EnrollInCourse.aspx.designer.cs">
+      <DependentUpon>EnrollInCourse.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -106,6 +115,13 @@
     </Compile>
     <Compile Include="MyProfile.aspx.designer.cs">
       <DependentUpon>MyProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Promocode.aspx.cs">
+      <DependentUpon>Promocode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Promocode.aspx.designer.cs">
+      <DependentUpon>Promocode.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Register.aspx.cs">
@@ -128,6 +144,13 @@
     </Compile>
     <Compile Include="submitAssign.aspx.designer.cs">
       <DependentUpon>submitAssign.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="viewAssignGrade.aspx.cs">
+      <DependentUpon>viewAssignGrade.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="viewAssignGrade.aspx.designer.cs">
+      <DependentUpon>viewAssignGrade.aspx</DependentUpon>
     </Compile>
     <Compile Include="viewAssignment.aspx.cs">
       <DependentUpon>viewAssignment.aspx</DependentUpon>

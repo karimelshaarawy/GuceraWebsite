@@ -11,7 +11,7 @@ namespace Gucera
 {
 
 
-    public partial class submitAssign
+    public partial class view_assign_grade
     {
 
         /// <summary>
@@ -24,13 +24,13 @@ namespace Gucera
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// Label3 control.
+        /// Label1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label3;
+        protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
         /// assignmentType control.
@@ -51,6 +51,15 @@ namespace Gucera
         protected global::System.Web.UI.WebControls.Label Label2;
 
         /// <summary>
+        /// Label3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label3;
+
+        /// <summary>
         /// assignmentNumber control.
         /// </summary>
         /// <remarks>
@@ -69,21 +78,12 @@ namespace Gucera
         protected global::System.Web.UI.WebControls.TextBox courseId;
 
         /// <summary>
-        /// Label1 control.
+        /// viewAssignmentGrade control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
-
-        /// <summary>
-        /// submitButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button submitButton;
+        protected global::System.Web.UI.WebControls.Button viewAssignmentGrade;
     }
 }

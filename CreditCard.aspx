@@ -32,10 +32,17 @@
         }
         .auto-style5 {
             position: absolute;
-            top: 374px;
-            left: 112px;
+            top: 403px;
+            left: 110px;
             z-index: 1;
             width: 70px;
+        }
+        .auto-style6 {
+            position: absolute;
+            top: 362px;
+            left: 51px;
+            z-index: 1;
+            width: 290px;
         }
     </style>
 </head>
@@ -64,6 +71,7 @@
             <asp:TextBox ID="cvv" runat="server" CssClass="auto-style4"></asp:TextBox>
         </div>
         <asp:Button ID="AddCreditCard" runat="server" CssClass="auto-style5" ForeColor="#000099" Text="Add" OnClick="AddCreditCard_Click" />
+        <asp:Label ID="Label1" runat="server" CssClass="auto-style6" ForeColor="Red" Text=""></asp:Label>
     </form>
 </body>
 </html>

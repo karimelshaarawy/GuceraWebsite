@@ -45,6 +45,19 @@ namespace Gucera
             Response.Redirect("submitAssign.aspx");
         }
 
-       
+        protected void viewPromocode_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Promocode.aspx");
+        }
+
+        protected void viewAssignmentGrade_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("viewAssignGrade.aspx");
+        }
+
+        protected void enrollInCourse_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("EnrollInCourse.aspx");
+        }
     }
 }

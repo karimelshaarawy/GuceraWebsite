@@ -21,16 +21,23 @@
         }
         .auto-style4 {
             position: absolute;
-            top: 156px;
-            left: 88px;
+            top: 171px;
+            left: 77px;
             z-index: 1;
             width: 98px;
         }
         .auto-style5 {
             position: absolute;
-            top: 193px;
+            top: 206px;
             left: 76px;
             z-index: 1;
+        }
+        .auto-style6 {
+            position: absolute;
+            top: 142px;
+            left: 70px;
+            z-index: 1;
+            width: 253px;
         }
     </style>
 </head>
@@ -46,10 +53,11 @@
         </p>
         <asp:Button ID="Button1" runat="server" CssClass="auto-style4" Text="login" OnClick="submit" />
         <p>
-            &nbsp;</p>
-        <p>
-        <asp:HyperLink ID="HyperLink1" runat="server" CssClass="auto-style5" NavigateUrl="Register.aspx">Register</asp:HyperLink>
+            <asp:Label ID="Label1" runat="server" CssClass="auto-style6" Text="" ForeColor="Red"></asp:Label>
         </p>
+        <asp:HyperLink ID="HyperLink1" runat="server" CssClass="auto-style5" NavigateUrl="Register.aspx">Register</asp:HyperLink>
+        <p>
+            &nbsp;</p>
     </form>
 </body>
 </html>
