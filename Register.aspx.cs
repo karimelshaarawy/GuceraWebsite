@@ -16,11 +16,6 @@ namespace Gucera
 
         }
 
-        protected void male_CheckedChanged(object sender, EventArgs e)
-        {
-            if (male.Checked == true)
-                female.Checked = false;
-        }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
@@ -37,9 +32,9 @@ namespace Gucera
             string mail = email.Text;
             string addr = Address.Text;
             int gender=0;
-            if (male.Checked)
+            if (DropDownList1.SelectedValue=="Male")
                 gender = 0;
-            else if (female.Checked)
+            else if (DropDownList1.SelectedValue=="Female")
                 gender = 1;
 
             SqlCommand registerProc = new SqlCommand("studentRegister", conn);
@@ -50,10 +45,19 @@ namespace Gucera
             registerProc.Parameters.Add(new SqlParameter("@email", mail));
             registerProc.Parameters.Add(new SqlParameter("@address", addr));
             registerProc.Parameters.Add(new SqlParameter("@gender", gender));
-            conn.Open();
-            registerProc.ExecuteNonQuery();
-            conn.Close();
-            Response.Redirect("StudentHome.aspx");
+            try
+            {
+                conn.Open();
+                registerProc.ExecuteNonQuery();
+                Response.Redirect("StudentHome.aspx");
+            }
+            catch (Exception)
+            {
+                Label1.Text = "There is another account with this email !!";
+            }
+            finally {
+                conn.Close();
+            }
         }
 
 
@@ -67,9 +71,9 @@ namespace Gucera
             string mail = email.Text;
             string addr = Address.Text;
             int gender = 0;
-            if (male.Checked)
+            if (DropDownList1.SelectedValue == "Male")
                 gender = 0;
-            else if (female.Checked)
+            else if (DropDownList1.SelectedValue == "Female")
                 gender = 1;
 
             SqlCommand registerProc = new SqlCommand("InstructorRegister", conn);
@@ -83,16 +87,12 @@ namespace Gucera
             conn.Open();
             registerProc.ExecuteNonQuery();
             conn.Close();
-            Response.Redirect("InstructorHome.aspx");
+          //  Response.Redirect("InstructorHome.aspx");
         }
 
        
 
-        protected void female_CheckedChanged(object sender, EventArgs e)
-        { if (female.Checked == true)
-                male.Checked = false;
-
-        }
+      
 
     }
 }

@@ -59,17 +59,21 @@ namespace Gucera
             submitproc.Parameters.Add(new SqlParameter("@cid", cid1));
             submitproc.Parameters.Add(new SqlParameter("@sid", sid1));
             submitproc.CommandType = CommandType.StoredProcedure;
-            int result = 0;
-            SqlCommand cmd = new SqlCommand("select count(*) from studentTakeAssignment  where cid=cid1 and sid=sid1 ", conn);
-               cmd.Parameters.AddWithValue("@cid", cid1);
-            result = (int)cmd.ExecuteScalar();
+            SqlCommand check = new SqlCommand("select COUNT(*) from StudentTakeCourse where ([cid]=@cid and [sid]=@sid)", conn);
+            check.Parameters.AddWithValue("@cid", courseId.Text);
+            check.Parameters.AddWithValue("@sid", sid1);
+
             conn.Open();
+            int result = (int)check.ExecuteScalar();
+
+
+           
             
-            
-            if (result ==0)
-                Response.Write("not enrolled in course");
+
+            if (result == 0)
+                Response.Write("not enrolled in the course");
             else
-            submitproc.ExecuteNonQuery();
+                submitproc.ExecuteNonQuery();
 
             conn.Close();
 

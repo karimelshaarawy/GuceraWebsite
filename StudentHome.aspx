@@ -63,16 +63,42 @@
             width: 248px;
             height: 44px;
         }
+        .auto-style8 {
+            position: absolute;
+            top: 241px;
+            left: 554px;
+            z-index: 1;
+            width: 249px;
+            height: 45px;
+        }
+        .auto-style9 {
+            position: absolute;
+            top: 307px;
+            left: 559px;
+            z-index: 1;
+            width: 249px;
+            height: 46px;
+        }
+        .auto-style10 {
+            position: absolute;
+            top: 386px;
+            left: 555px;
+            z-index: 1;
+            width: 250px;
+            height: 45px;
+        }
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
         <div align="center" style="font-size: xx-large; font-family: 'Arial Black'; color: #000080;">
+            <asp:Button ID="Button2" runat="server" CssClass="auto-style10" ForeColor="#000099" Text="List Certificates" />
          Student Home
         </div>
         <asp:Button ID="viewMyProfile" runat="server" CssClass="auto-style1" ForeColor="#000099" Text="View my profile" OnClick="viewMyProfile_Click" />
         <asp:Button ID="viewAvailableCourses" runat="server" CssClass="auto-style2" ForeColor="#000099" Text="View Avaliable Courses" OnClick="viewAvailableCourses_Click" />
         <asp:Button ID="addCreditCard" runat="server" CssClass="auto-style3" ForeColor="#000099" OnClick="addCreditCard_Click" Text="Add Credit Card" />
+        <asp:Button ID="addFeedback" runat="server" CssClass="auto-style9" ForeColor="#000099" Text="Add Feedback" OnClick="addFeedback_Click" />
         <asp:Button ID="viewAssignment" runat="server" CssClass="auto-style4" ForeColor="#000099" OnClick="viewAssignment_Click" Text="View Assignment" />
 
         <p>
@@ -82,6 +108,11 @@
         <asp:Button ID="viewPromocode" runat="server" CssClass="auto-style6" ForeColor="#000099" OnClick="viewPromocode_Click" Text="View Promocodes" />
 
         <asp:Button ID="enrollInCourse" runat="server" CssClass="auto-style7" ForeColor="#000099" OnClick="enrollInCourse_Click" Text="Enroll in Course" />
+        <p>
+            <asp:Button ID="Button1" runat="server" CssClass="auto-style8" ForeColor="#000099" OnClick="Button1_Click" Text="View Assignment Grade" />
+        </p>
+        <p>
+            &nbsp;</p>
     </form>
 </body>
 </html>

@@ -28,15 +28,38 @@ namespace Gucera
             int cid = Int16.Parse(courseId.Text);
             string assignType = assignmentType.Text;
             int assignNumber = Int16.Parse(assignmentNumber.Text);
-            int sid = (int)Session["user"];
+            int sid1 = (int)Session["user"];
             SqlCommand viewGrade = new SqlCommand("viewAssignGrades", conn);
             viewGrade.Parameters.Add(new SqlParameter("@assignType", assignType));
             viewGrade.Parameters.Add(new SqlParameter("@assignNumber", assignNumber));
             viewGrade.Parameters.Add(new SqlParameter("@cid", cid));
-            viewGrade.Parameters.Add(new SqlParameter("@sid", sid));
+            viewGrade.Parameters.Add(new SqlParameter("@sid", sid1));
             SqlParameter assignGrade = viewGrade.Parameters.Add("@assignGrade", System.Data.SqlDbType.Int);
             assignGrade.Direction = System.Data.ParameterDirection.Output;
             viewGrade.CommandType = System.Data.CommandType.StoredProcedure;
+            SqlCommand check = new SqlCommand("select COUNT(*) from StudentTakeAssignment STC inner join Course C on STC.cid=C.id inner join Assignment A on STC.assignmentNumber=A.number where STC.cid=@cid AND STC.sid=@sid AND C.id=@cid and A.type=@assignType AND A.number=@assignnumber", conn);
+            check.Parameters.AddWithValue("@cid", courseId.Text);
+            check.Parameters.AddWithValue("@sid",sid1);
+            check.Parameters.AddWithValue("@assignType", assignmentType.Text);
+            check.Parameters.AddWithValue("@assignNumber", assignmentNumber.Text);
+
+            conn.Open();
+            int result = (int)check.ExecuteScalar();
+
+
+
+
+
+            if (result == 0)
+                Response.Write("not enrolled in the course");
+            else
+            {
+                viewGrade.ExecuteNonQuery();
+                Response.Write(assignGrade.Value);
+            }
+            conn.Close();
+
+
 
         }
     }

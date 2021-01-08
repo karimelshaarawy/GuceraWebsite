@@ -38,8 +38,10 @@ namespace Gucera
             {
                 conn.Open();
                 addCreditCard.ExecuteNonQuery();
-                
-            }catch(Exception )
+                Label1.Text = "The credit card is added successfully !!";
+
+            }
+            catch(Exception )
             {
                 Label1.Text = "You have already added this credit card";
             }

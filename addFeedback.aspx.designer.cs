@@ -11,7 +11,7 @@ namespace Gucera
 {
 
 
-    public partial class EnrollInCourse
+    public partial class addFeedback
     {
 
         /// <summary>
@@ -24,22 +24,22 @@ namespace Gucera
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// cid control.
+        /// Button1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox cid;
+        protected global::System.Web.UI.WebControls.Button Button1;
 
         /// <summary>
-        /// instid control.
+        /// comment control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox instid;
+        protected global::System.Web.UI.WebControls.TextBox comment;
 
         /// <summary>
         /// Label1 control.
@@ -51,12 +51,21 @@ namespace Gucera
         protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
-        /// enroll control.
+        /// courseId control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button enroll;
+        protected global::System.Web.UI.WebControls.TextBox courseId;
+
+        /// <summary>
+        /// Label2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label2;
     }
 }
