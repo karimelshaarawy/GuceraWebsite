@@ -81,8 +81,16 @@
         }
         .auto-style10 {
             position: absolute;
-            top: 386px;
+            top: 384px;
             left: 555px;
+            z-index: 1;
+            width: 250px;
+            height: 45px;
+        }
+        .auto-style11 {
+            position: absolute;
+            top: 447px;
+            left: 264px;
             z-index: 1;
             width: 250px;
             height: 45px;
@@ -92,7 +100,7 @@
 <body>
     <form id="form1" runat="server">
         <div align="center" style="font-size: xx-large; font-family: 'Arial Black'; color: #000080;">
-            <asp:Button ID="Button2" runat="server" CssClass="auto-style10" ForeColor="#000099" Text="List Certificates" />
+            <asp:Button ID="listCertificates" runat="server" CssClass="auto-style10" ForeColor="#000099" Text="List Certificates" OnClick="listCertificates_Click" />
          Student Home
         </div>
         <asp:Button ID="viewMyProfile" runat="server" CssClass="auto-style1" ForeColor="#000099" Text="View my profile" OnClick="viewMyProfile_Click" />
@@ -100,6 +108,8 @@
         <asp:Button ID="addCreditCard" runat="server" CssClass="auto-style3" ForeColor="#000099" OnClick="addCreditCard_Click" Text="Add Credit Card" />
         <asp:Button ID="addFeedback" runat="server" CssClass="auto-style9" ForeColor="#000099" Text="Add Feedback" OnClick="addFeedback_Click" />
         <asp:Button ID="viewAssignment" runat="server" CssClass="auto-style4" ForeColor="#000099" OnClick="viewAssignment_Click" Text="View Assignment" />
+
+        <asp:Button ID="AddTelephoneNumber" runat="server" CssClass="auto-style11" ForeColor="#000099" Text="Add Telephone Number" OnClick="AddTelephoneNumber_Click" />
 
         <p>
             <asp:Button ID="submitAssignment" runat="server" CssClass="auto-style5" ForeColor="#000066" Text="Submit Assignment" OnClick="submitAssignment_Click" />
