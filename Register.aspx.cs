@@ -31,31 +31,39 @@ namespace Gucera
             string pass = password.Text;
             string mail = email.Text;
             string addr = Address.Text;
-            int gender=0;
-            if (DropDownList1.SelectedValue=="Male")
+            int gender = 0;
+            if (DropDownList1.SelectedValue == "Male")
                 gender = 0;
-            else if (DropDownList1.SelectedValue=="Female")
+            else if (DropDownList1.SelectedValue == "Female")
                 gender = 1;
 
             SqlCommand registerProc = new SqlCommand("studentRegister", conn);
             registerProc.CommandType = System.Data.CommandType.StoredProcedure;
-            registerProc.Parameters.Add(new SqlParameter("@first_name",first));
+            registerProc.Parameters.Add(new SqlParameter("@first_name", first));
             registerProc.Parameters.Add(new SqlParameter("@last_name", last));
             registerProc.Parameters.Add(new SqlParameter("@password", pass));
             registerProc.Parameters.Add(new SqlParameter("@email", mail));
             registerProc.Parameters.Add(new SqlParameter("@address", addr));
             registerProc.Parameters.Add(new SqlParameter("@gender", gender));
+            SqlCommand getId = new SqlCommand("getId", conn);
+            getId.CommandType = System.Data.CommandType.StoredProcedure;
+            getId.Parameters.Add(new SqlParameter("@email", mail));
+            SqlParameter sid = getId.Parameters.Add("@id", System.Data.SqlDbType.Int);
+            sid.Direction = System.Data.ParameterDirection.Output;
             try
             {
                 conn.Open();
                 registerProc.ExecuteNonQuery();
+                getId.ExecuteNonQuery();
+                Session["user"] = sid.Value;
                 Response.Redirect("StudentHome.aspx");
             }
             catch (Exception)
             {
                 Label1.Text = "There is another account with this email !!";
             }
-            finally {
+            finally
+            {
                 conn.Close();
             }
         }
@@ -84,15 +92,32 @@ namespace Gucera
             registerProc.Parameters.Add(new SqlParameter("@email", mail));
             registerProc.Parameters.Add(new SqlParameter("@address", addr));
             registerProc.Parameters.Add(new SqlParameter("@gender", gender));
-            conn.Open();
-            registerProc.ExecuteNonQuery();
-            conn.Close();
-          //  Response.Redirect("InstructorHome.aspx");
+            SqlCommand getId = new SqlCommand("getId", conn);
+            getId.CommandType = System.Data.CommandType.StoredProcedure;
+            getId.Parameters.Add(new SqlParameter("@email", mail));
+            SqlParameter sid = getId.Parameters.Add("@id", System.Data.SqlDbType.Int);
+            sid.Direction = System.Data.ParameterDirection.Output;
+            try
+            {
+                conn.Open();
+                registerProc.ExecuteNonQuery();
+                getId.ExecuteNonQuery();
+                Session["user"] = sid.Value;
+                Response.Redirect("InstructorHome.aspx");
+            }
+            catch (Exception)
+            {
+                Label1.Text = "There is another account with this email !!";
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
 
-       
 
-      
+
+
 
     }
 }
