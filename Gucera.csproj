@@ -73,6 +73,7 @@
   <ItemGroup>
     <Content Include="AcceptCourses.aspx" />
     <Content Include="addFeedback.aspx" />
+    <Content Include="AddMobileNumber.aspx" />
     <Content Include="AdminHome.aspx" />
     <Content Include="AvailableCourses.aspx" />
     <Content Include="CreatePromoCode.aspx" />
@@ -106,6 +107,13 @@
     </Compile>
     <Compile Include="addFeedback.aspx.designer.cs">
       <DependentUpon>addFeedback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddMobileNumber.aspx.cs">
+      <DependentUpon>AddMobileNumber.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddMobileNumber.aspx.designer.cs">
+      <DependentUpon>AddMobileNumber.aspx</DependentUpon>
     </Compile>
     <Compile Include="AdminHome.aspx.cs">
       <DependentUpon>AdminHome.aspx</DependentUpon>
