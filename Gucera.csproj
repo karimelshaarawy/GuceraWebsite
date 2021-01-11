@@ -17,8 +17,10 @@
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort>44375</IISExpressSSLPort>
-    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
-    <IISExpressWindowsAuthentication>enabled</IISExpressWindowsAuthentication>
+    <IISExpressAnonymousAuthentication>
+    </IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>
+    </IISExpressWindowsAuthentication>
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
@@ -79,6 +81,7 @@
     <Content Include="IssuePromoCode.aspx" />
     <Content Include="ListAddedCourses.aspx" />
     <Content Include="ListAllCourses.aspx" />
+    <Content Include="listCertificates.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="MyProfile.aspx" />
     <Content Include="Promocode.aspx" />
@@ -159,6 +162,13 @@
     </Compile>
     <Compile Include="ListAllCourses.aspx.designer.cs">
       <DependentUpon>ListAllCourses.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="listCertificates.aspx.cs">
+      <DependentUpon>listCertificates.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="listCertificates.aspx.designer.cs">
+      <DependentUpon>listCertificates.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
