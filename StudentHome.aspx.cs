@@ -71,5 +71,15 @@ namespace Gucera
         {
             Response.Redirect("addFeedback.aspx");
         }
+
+        protected void listCertificates_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("listCertificates.aspx");
+        }
+
+        protected void AddTelephoneNumber_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("AddMobileNumber.aspx");
+        }
     }
 }

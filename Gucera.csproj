@@ -68,9 +68,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="addFeedback.aspx" />
+    <Content Include="AddMobileNumber.aspx" />
     <Content Include="AvailableCourses.aspx" />
     <Content Include="CreditCard.aspx" />
     <Content Include="EnrollInCourse.aspx" />
+    <Content Include="listCertificates.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="MyProfile.aspx" />
     <Content Include="Promocode.aspx" />
@@ -88,6 +90,13 @@
     </Compile>
     <Compile Include="addFeedback.aspx.designer.cs">
       <DependentUpon>addFeedback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddMobileNumber.aspx.cs">
+      <DependentUpon>AddMobileNumber.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddMobileNumber.aspx.designer.cs">
+      <DependentUpon>AddMobileNumber.aspx</DependentUpon>
     </Compile>
     <Compile Include="AvailableCourses.aspx.cs">
       <DependentUpon>AvailableCourses.aspx</DependentUpon>
@@ -109,6 +118,13 @@
     </Compile>
     <Compile Include="EnrollInCourse.aspx.designer.cs">
       <DependentUpon>EnrollInCourse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="listCertificates.aspx.cs">
+      <DependentUpon>listCertificates.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="listCertificates.aspx.designer.cs">
+      <DependentUpon>listCertificates.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>

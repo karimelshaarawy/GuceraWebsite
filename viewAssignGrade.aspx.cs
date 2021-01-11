@@ -22,13 +22,20 @@ namespace Gucera
             SqlConnection conn = new SqlConnection(connstr);
 
 
-
-
-
-            int cid = Int16.Parse(courseId.Text);
-            string assignType = assignmentType.Text;
-            int assignNumber = Int16.Parse(assignmentNumber.Text);
-            int sid1 = (int)Session["user"];
+            int cid = 0;
+            String assignType = "";
+            int assignNumber = 0;
+            int sid1 = 0;
+            try
+            {
+                cid = Int16.Parse(courseId.Text);
+                 assignType = assignmentType.Text;
+                 assignNumber = Int16.Parse(assignmentNumber.Text);
+                sid1 = (int)Session["user"];
+            }
+            catch (Exception) { Response.Write("wrong input");
+                return;
+            }
             SqlCommand viewGrade = new SqlCommand("viewAssignGrades", conn);
             viewGrade.Parameters.Add(new SqlParameter("@assignType", assignType));
             viewGrade.Parameters.Add(new SqlParameter("@assignNumber", assignNumber));

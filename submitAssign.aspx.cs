@@ -26,10 +26,23 @@ namespace Gucera
         {
             string connstr = WebConfigurationManager.ConnectionStrings["gucera"].ToString();
             SqlConnection conn = new SqlConnection(connstr);
-            int cid = Int16.Parse(courseId.Text);
-            string assignType = assignmentType.Text;
-            int assignNumber = Int16.Parse(assignmentNumber.Text);
-            int sid = (int)Session["user"];
+            int cid =0;
+            String assignType = "";
+            int assignNumber =0;
+            int sid =0;
+
+            try
+            {
+                 cid = Int16.Parse(courseId.Text);
+                 assignType = assignmentType.Text;
+                 assignNumber = Int16.Parse(assignmentNumber.Text);
+                 sid = (int)Session["user"];
+            }
+            catch (Exception)
+            {
+                Response.Write("Wrong Input");
+                return;
+            }
             SqlCommand submitproc = new SqlCommand("submitAssign", conn);
             submitproc.Parameters.Add(new SqlParameter("@assignType",assignType));
             submitproc.Parameters.Add(new SqlParameter("@assignNumber",assignNumber));
@@ -46,12 +59,22 @@ namespace Gucera
         {
             string connstr = WebConfigurationManager.ConnectionStrings["gucera"].ToString();
             SqlConnection conn = new SqlConnection(connstr);
-            
-               
-            
-            int cid1 = Int16.Parse(courseId.Text);
-            string assignType = assignmentType.Text;
-            int assignNumber = Int16.Parse(assignmentNumber.Text);
+            int cid1 = 0;
+            String assignType = "";
+            int assignNumber = 0;
+
+
+            try
+            {
+                cid1 = Int16.Parse(courseId.Text);
+                 assignType = assignmentType.Text;
+                 assignNumber = Int16.Parse(assignmentNumber.Text);
+            }
+            catch (Exception)
+            {
+                Response.Write("Wrong Input");
+                return;
+            }
             int sid1 = (int)Session["user"];
             SqlCommand submitproc = new SqlCommand("submitAssign", conn);
             submitproc.Parameters.Add(new SqlParameter("@assignType", assignType));
@@ -67,14 +90,16 @@ namespace Gucera
             int result = (int)check.ExecuteScalar();
 
 
-           
-            
+
+
 
             if (result == 0)
                 Response.Write("not enrolled in the course");
             else
+            {
                 submitproc.ExecuteNonQuery();
-
+                Response.Write("done");
+            }
             conn.Close();
 
         }
