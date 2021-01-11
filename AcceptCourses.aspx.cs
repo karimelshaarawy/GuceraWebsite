@@ -23,7 +23,7 @@ namespace Gucera
             int CourseId = 0;
             try
             {
-                adminID = Int16.Parse(Txt1.Text);
+                adminID = (int)Session["user"];
                 CourseId = Int16.Parse(Txt2.Text);
             }
             catch (Exception) { Label3.Text = "please enter correct information";return; }

@@ -14,6 +14,9 @@
         <asp:Button ID="AcceptCourses" runat="server" OnClick="AcceptCourses_Click" Text="Accept Course" /> 
         <asp:Button ID="CreatePromoCode" runat="server" OnClick="CreatePromoCode_Click" Text="Create PromoCode" />
         <asp:Button ID="IssuePromoCode" runat="server" OnClick="IssuePromoCode_Click" Text="Issue PromoCode" />
+        <p>
+            <asp:Button ID="MobileNo" runat="server" OnClick="AddMobileNumber_Click" Text="addMobileNumber" />
+        </p>
     </form>
 </body>
 </html>

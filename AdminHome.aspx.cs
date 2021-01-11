@@ -38,5 +38,10 @@ namespace Gucera
         {
             Response.Redirect("IssuePromoCode.aspx");
         }
+
+        protected void AddMobileNumber_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("AddMobileNumber.aspx");
+        }
     }
 }

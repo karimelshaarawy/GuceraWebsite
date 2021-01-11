@@ -27,7 +27,7 @@
         </p>
         <asp:Button ID="create" runat="server" Text="Create" OnClick="create_Click" />
         <p>
-            <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+            <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
         </p>
     </form>
 </body>
