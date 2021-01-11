@@ -67,16 +67,23 @@ namespace Gucera
             int result = (int)check.ExecuteScalar();
 
 
-           
-            
 
-            if (result == 0)
-                Response.Write("not enrolled in the course");
-            else
-                submitproc.ExecuteNonQuery();
+            try
+            {
 
-            conn.Close();
-
+                if (result == 0)
+                    Response.Write("not enrolled in the course");
+                else
+                    submitproc.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+                Response.Write("Assignment Already submitted");
+                return;
+            }
+            finally {
+                conn.Close();
+            }
         }
     }
 }
