@@ -284,7 +284,8 @@
     <Compile Include="InstructorViewAssignmentsStudents.aspx.designer.cs">
       <DependentUpon>InstructorViewAssignmentsStudents.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Login.    <Compile Include="InstructorgradeAssignmentOfAStudent.aspx.cs">
+			 
+	<Compile Include="InstructorgradeAssignmentOfAStudent.aspx.cs">
       <DependentUpon>InstructorgradeAssignmentOfAStudent.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
@@ -319,10 +320,11 @@
     <Compile Include="InstructorViewAssignmentsStudents.aspx.designer.cs">
       <DependentUpon>InstructorViewAssignmentsStudents.aspx</DependentUpon>
     </Compile>
-aspx.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
+	  aspx.cs">
+	  <Compile Include="Login.">
+	  <DependentUpon>Login.aspx</DependentUpon>
+	  <SubType>ASPXCodeBehind</SubType>
+  </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
