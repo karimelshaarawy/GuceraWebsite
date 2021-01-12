@@ -82,6 +82,7 @@
     <Content Include="DefineAssignmentOfCourseOfCertianType.aspx" />
     <Content Include="EnrollInCourse.aspx" />
     <Content Include="InstructorgradeAssignmentOfAStudent.aspx" />
+    <Content Include="InstructorHome.aspx" />
     <Content Include="InstructorIssueCertificateToStudent.aspx" />
     <Content Include="InstructorViewAssignmentsStudents.aspx" />
     <Content Include="IssuePromoCode.aspx" />
@@ -174,6 +175,13 @@
     </Compile>
     <Compile Include="InstructorgradeAssignmentOfAStudent.aspx.designer.cs">
       <DependentUpon>InstructorgradeAssignmentOfAStudent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InstructorHome.aspx.cs">
+      <DependentUpon>InstructorHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InstructorHome.aspx.designer.cs">
+      <DependentUpon>InstructorHome.aspx</DependentUpon>
     </Compile>
     <Compile Include="InstructorIssueCertificateToStudent.aspx.cs">
       <DependentUpon>InstructorIssueCertificateToStudent.aspx</DependentUpon>
