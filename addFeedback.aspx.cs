@@ -20,9 +20,18 @@ namespace Gucera
         {
             string connstr = WebConfigurationManager.ConnectionStrings["gucera"].ToString();
             SqlConnection conn = new SqlConnection(connstr);
-
-            int cid1 = Int16.Parse(courseId.Text);
-            String comment1 = comment.Text;
+            int cid1 = 0;
+            String comment1 = "";
+            try
+            {
+                cid1 = Int16.Parse(courseId.Text);
+                comment1 = comment.Text;
+            }
+            catch (Exception)
+            {
+                Response.Write("Wrong Input");
+                return;
+            }
             int sid1 = (int)Session["user"];
             SqlCommand addFeed = new SqlCommand("addFeedback", conn);
             addFeed.Parameters.Add(new SqlParameter("@comment", comment1));
@@ -30,7 +39,7 @@ namespace Gucera
             addFeed.Parameters.Add(new SqlParameter("@sid", sid1));
             addFeed.CommandType = System.Data.CommandType.StoredProcedure;
             SqlCommand check = new SqlCommand("SELECT COUNT(*) FROM StudentTakeCourse WHERE sid = @sid AND cid = @cid", conn);
-           
+
             check.Parameters.AddWithValue("@cid", courseId.Text);
             check.Parameters.AddWithValue("@sid", sid1);
             conn.Open();
@@ -43,8 +52,10 @@ namespace Gucera
             if (result == 0)
                 Response.Write("not enrolled in the course");
             else
+            {
                 addFeed.ExecuteNonQuery();
-
+                Response.Write("Done");
+            }
             conn.Close();
 
 

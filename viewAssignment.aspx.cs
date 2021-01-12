@@ -18,7 +18,7 @@ namespace Gucera
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         protected void courseID_TextChanged(object sender, EventArgs e)
@@ -30,10 +30,21 @@ namespace Gucera
         {
             string connstr = WebConfigurationManager.ConnectionStrings["gucera"].ToString();
             SqlConnection conn = new SqlConnection(connstr);
-            int id = Int16.Parse(courseID.Text);
-            int sid = (int)Session["user"];
+            int id = 0;
+            int sid = 0;
+            try
+            {
+                id = Int16.Parse(courseID.Text);
+                sid = (int)Session["user"];
+            }
+            catch (Exception)
+            {
+                Response.Write("Wrong Input");
+                return;
+            }
+
             SqlCommand viewAssignProc = new SqlCommand("viewAssign", conn);
-            viewAssignProc.Parameters.Add(new SqlParameter("@courseId",id));
+            viewAssignProc.Parameters.Add(new SqlParameter("@courseId", id));
             viewAssignProc.Parameters.Add(new SqlParameter("@Sid", sid));
             viewAssignProc.CommandType = CommandType.StoredProcedure;
             conn.Open();

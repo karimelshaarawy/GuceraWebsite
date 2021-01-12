@@ -20,7 +20,7 @@ namespace Gucera
         protected void viewMyProfile_Click(object sender, EventArgs e)
         {
             Response.Redirect("MyProfile.aspx");
-            
+
         }
 
         protected void viewAvailableCourses_Click(object sender, EventArgs e)
@@ -38,7 +38,7 @@ namespace Gucera
             Response.Redirect("viewAssignment.aspx");
         }
 
-        
+
 
         protected void submitAssignment_Click(object sender, EventArgs e)
         {
@@ -60,7 +60,7 @@ namespace Gucera
             Response.Redirect("EnrollInCourse.aspx");
         }
 
-        
+
         protected void Button1_Click(object sender, EventArgs e)
         {
 
@@ -70,6 +70,16 @@ namespace Gucera
         protected void addFeedback_Click(object sender, EventArgs e)
         {
             Response.Redirect("addFeedback.aspx");
+        }
+
+        protected void listCertificates_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("listCertificates.aspx");
+        }
+
+        protected void AddTelephoneNumber_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("AddMobileNumber.aspx");
         }
     }
 }

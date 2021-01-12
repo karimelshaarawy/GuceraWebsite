@@ -46,7 +46,7 @@
         <div>
             <h1 style="text-align:center">Login</h1>
         </div>
-        Username&nbsp;
+        ID&nbsp;
         <asp:TextBox ID="username" runat="server" CssClass="auto-style2"></asp:TextBox>
         <p>
             password<asp:TextBox ID="password" runat="server" CssClass="auto-style3"></asp:TextBox>

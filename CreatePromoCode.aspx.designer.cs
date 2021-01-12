@@ -11,7 +11,7 @@ namespace Gucera
 {
 
 
-    public partial class StudentHome
+    public partial class CreatePromoCode
     {
 
         /// <summary>
@@ -24,102 +24,111 @@ namespace Gucera
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// listCertificates control.
+        /// code control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button listCertificates;
+        protected global::System.Web.UI.WebControls.Label code;
 
         /// <summary>
-        /// viewMyProfile control.
+        /// Txt1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button viewMyProfile;
+        protected global::System.Web.UI.WebControls.TextBox Txt1;
 
         /// <summary>
-        /// viewAvailableCourses control.
+        /// issue control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button viewAvailableCourses;
+        protected global::System.Web.UI.WebControls.Label issue;
 
         /// <summary>
-        /// addCreditCard control.
+        /// Txt2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button addCreditCard;
+        protected global::System.Web.UI.WebControls.TextBox Txt2;
 
         /// <summary>
-        /// addFeedback control.
+        /// expiry control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button addFeedback;
+        protected global::System.Web.UI.WebControls.Label expiry;
 
         /// <summary>
-        /// viewAssignment control.
+        /// Txt3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button viewAssignment;
+        protected global::System.Web.UI.WebControls.TextBox Txt3;
 
         /// <summary>
-        /// AddTelephoneNumber control.
+        /// discount control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button AddTelephoneNumber;
+        protected global::System.Web.UI.WebControls.Label discount;
 
         /// <summary>
-        /// submitAssignment control.
+        /// Txt4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button submitAssignment;
+        protected global::System.Web.UI.WebControls.TextBox Txt4;
 
         /// <summary>
-        /// viewPromocode control.
+        /// id control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button viewPromocode;
+        protected global::System.Web.UI.WebControls.Label id;
 
         /// <summary>
-        /// enrollInCourse control.
+        /// Txt5 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button enrollInCourse;
+        protected global::System.Web.UI.WebControls.TextBox Txt5;
 
         /// <summary>
-        /// Button1 control.
+        /// create control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Button create;
+
+        /// <summary>
+        /// Label1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label1;
     }
 }
