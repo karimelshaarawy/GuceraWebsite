@@ -1,0 +1,59 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Linq;
+using System.Web;
+using System.Web.Configuration;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+namespace Gucera
+{
+    public partial class AddAnotherInstructorToCourse : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void addInstructorTocourse_Click(object sender, EventArgs e)
+        {
+            string connstr = WebConfigurationManager.ConnectionStrings["gucera"].ToString();
+            SqlConnection conn = new SqlConnection(connstr);
+            conn.InfoMessage += new SqlInfoMessageEventHandler(OnInfoMessage);
+            try
+            {
+                SqlCommand updateCourseProc = new SqlCommand("AddAnotherInstructorToCourse", conn);
+                int id = (int)Session["user"];
+                int instID = Int16.Parse(newInstId.Text);
+                int cid = Int16.Parse(CourseId.Text);
+                updateCourseProc.CommandType = System.Data.CommandType.StoredProcedure;
+                updateCourseProc.Parameters.Add(new SqlParameter("@adderIns ", id));
+                updateCourseProc.Parameters.Add(new SqlParameter("@insid  ", instID));
+                updateCourseProc.Parameters.Add(new SqlParameter("@cid", cid));
+                conn.Open();
+                Label3.Text = "Course content updated succesfully";
+                updateCourseProc.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+                Label3.Text = "Error occured : invalid input";
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+        }
+
+        protected void OnInfoMessage(object sender, SqlInfoMessageEventArgs args)
+        {
+            foreach (SqlError err in args.Errors)
+            {
+                Label3.Text = err.Message;
+            }
+        }
+
+    }
+
+}
