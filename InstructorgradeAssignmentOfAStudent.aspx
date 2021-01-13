@@ -24,7 +24,7 @@
         </p>
         <asp:Label ID="Label4" runat="server" Text="assigment type"></asp:Label>
         <p>
-            <asp:TextBox ID="assigmentType" runat="server"></asp:TextBox>
+            <asp:TextBox ID="assigmentType" runat="server" MaxLength="10"></asp:TextBox>
         </p>
         <asp:Label ID="Label5" runat="server" Text="grade"></asp:Label>
         <p>

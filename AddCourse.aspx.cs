@@ -27,12 +27,12 @@ namespace Gucera
                 SqlCommand addCourseProc = new SqlCommand("InstAddCourse", conn);
                 int id = (int)Session["user"];
                 int credit = Int16.Parse(Credit_hours.Text);
-                int priceInt = Int16.Parse(price.Text);
+                decimal priceNum = Decimal.Parse(price.Text);
                 addCourseProc.CommandType = System.Data.CommandType.StoredProcedure;
                 addCourseProc.Parameters.Add(new SqlParameter("@creditHours", credit));
                 addCourseProc.Parameters.Add(new SqlParameter("@name", Name.Text));
-                addCourseProc.Parameters.Add(new SqlParameter("@price", priceInt));
-                addCourseProc.Parameters.Add(new SqlParameter("@id", id));
+                addCourseProc.Parameters.Add(new SqlParameter("@price", priceNum));
+                addCourseProc.Parameters.Add(new SqlParameter("@instructorId ", id));
                 conn.Open();
                 Label4.Text = "Course added succesfully";
                 addCourseProc.ExecuteNonQuery();

@@ -15,7 +15,7 @@
     <form id="form1" runat="server">
       
         <asp:Label ID="Label1" class="label" runat="server" Text="Name"></asp:Label>
-        <asp:TextBox ID="Name" runat="server"></asp:TextBox>
+        <asp:TextBox ID="Name" runat="server" MaxLength="10"></asp:TextBox>
         <asp:Label ID="Label2" class="label" runat="server" Text="Credit Hours"></asp:Label>
         <asp:TextBox ID="Credit_hours" runat="server"></asp:TextBox>
         <asp:Label ID="Label3" class="label" runat="server" Text="Price"></asp:Label>

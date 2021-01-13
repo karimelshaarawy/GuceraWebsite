@@ -23,18 +23,17 @@ namespace Gucera
             conn.InfoMessage += new SqlInfoMessageEventHandler(OnInfoMessage);
             try
             {
-                SqlCommand updateCourseProc = new SqlCommand("AddAnotherInstructorToCourse", conn);
+                SqlCommand updateCourseProc = new SqlCommand("InstructorIssueCertificateToStudent", conn);
                 int id = (int)Session["user"];
                 int cid = Int16.Parse(CourseID.Text);
                 int sid = Int16.Parse(StudentID.Text);
-                DateTime date = DateTime.Today;
                 updateCourseProc.CommandType = System.Data.CommandType.StoredProcedure;
                 updateCourseProc.Parameters.Add(new SqlParameter("@insId", id));
                 updateCourseProc.Parameters.Add(new SqlParameter("@sid", sid));
                 updateCourseProc.Parameters.Add(new SqlParameter("@cid", cid));
-                updateCourseProc.Parameters.Add(new SqlParameter("@issueDate",date.ToString()));
+                updateCourseProc.Parameters.Add(new SqlParameter("@issueDate",Date.Text));
                 conn.Open();
-                Label3.Text = "Course content updated succesfully";
+                Label3.Text = "Certificate issued successfully";
                 updateCourseProc.ExecuteNonQuery();
             }
             catch (Exception)

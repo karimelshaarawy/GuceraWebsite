@@ -39,7 +39,7 @@ namespace Gucera
                 gradeAssigmentProc.Parameters.Add(new SqlParameter("@grade", grade));
                 gradeAssigmentProc.Parameters.Add(new SqlParameter("@instrId", id));
                 conn.Open();
-                Label6.Text = "Course added succesfully";
+                Label6.Text = "Assigment graded succesfully";
                 gradeAssigmentProc.ExecuteNonQuery();
 
             }

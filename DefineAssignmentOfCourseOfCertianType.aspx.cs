@@ -24,7 +24,7 @@ namespace Gucera
 
             try
             {
-                SqlCommand addCourseProc = new SqlCommand("InstAddCourse", conn);
+                SqlCommand addCourseProc = new SqlCommand("DefineAssignmentOfCourseOfCertianType", conn);
                 int id = (int)Session["user"];
                 int cid = Int16.Parse(CourseID.Text);
                 int number = Int16.Parse(num.Text);

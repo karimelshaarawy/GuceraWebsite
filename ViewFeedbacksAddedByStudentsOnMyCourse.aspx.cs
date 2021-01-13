@@ -27,8 +27,8 @@ namespace Gucera
             int instId = (int)Session["user"];
             try
             {
-                SqlCommand viewAssignProc = new SqlCommand("viewAssign", conn);
-                viewAssignProc.Parameters.Add(new SqlParameter("@courseId", cid));
+                SqlCommand viewAssignProc = new SqlCommand("ViewFeedbacksAddedByStudentsOnMyCourse ", conn);
+                viewAssignProc.Parameters.Add(new SqlParameter("@cid", cid));
                 viewAssignProc.Parameters.Add(new SqlParameter("@instrId", instId));
                 viewAssignProc.CommandType = CommandType.StoredProcedure;
                 conn.Open();

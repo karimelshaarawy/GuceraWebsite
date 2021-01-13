@@ -16,7 +16,7 @@
         </p>
         <asp:Label ID="Label2" runat="server" Text="Type"></asp:Label>
         <p>
-            <asp:TextBox ID="type" runat="server"></asp:TextBox>
+            <asp:TextBox ID="type" runat="server" MaxLength="10"></asp:TextBox>
         </p>
         <asp:Label ID="Label3" runat="server" Text="number"></asp:Label>
         <p>
@@ -28,7 +28,7 @@
         </p>
         <asp:Label ID="Label5" runat="server" Text="deadline"></asp:Label>
         <p>
-            <asp:TextBox ID="deadline" runat="server"></asp:TextBox>
+            <asp:TextBox ID="deadline" runat="server" TextMode="Date"></asp:TextBox>
         </p>
         <asp:Label ID="Label6" runat="server" Text="weight"></asp:Label>
         <p>
@@ -36,7 +36,7 @@
         </p>
         <asp:Label ID="Label7" runat="server" Text="content"></asp:Label>
         <p>
-            <asp:TextBox ID="content" runat="server"></asp:TextBox>
+            <asp:TextBox ID="content" runat="server" MaxLength="200"></asp:TextBox>
         </p>
         <p>
             <asp:Button ID="defineAssigment" runat="server" Text="add" OnClick="defineAssigment_Click" />

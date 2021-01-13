@@ -16,6 +16,10 @@
             <asp:Label ID="Label2" runat="server" Text="Student ID"></asp:Label>
         </div>
         <asp:TextBox ID="StudentID" runat="server"></asp:TextBox>
+        <div>
+            <asp:Label ID="Label4" runat="server" Text="Student ID"></asp:Label>
+        </div>
+        <asp:TextBox ID="Date" runat="server" TextMode="Date"></asp:TextBox>
         <p>
             <asp:Button ID="Issue" runat="server" Text="Issue certificate" OnClick="Issue_Click" />
         </p>
