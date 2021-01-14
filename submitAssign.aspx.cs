@@ -74,7 +74,10 @@ namespace Gucera
                 if (result == 0)
                     Response.Write("not enrolled in the course");
                 else
+                {
                     submitproc.ExecuteNonQuery();
+                    Response.Write("Done");
+                }
             }
             catch (Exception)
             {

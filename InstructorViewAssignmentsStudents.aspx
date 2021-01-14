@@ -16,9 +16,9 @@
         </p>
         <asp:Button ID="showTable" runat="server" Text="View" OnClick="showTable_Click" />
        <p>
-           <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
+           <asp:Label ID="Label2" runat="server" Text=""></asp:Label>
        </p> 
-        <asp:GridView ID="Assigment" runat="server">
+        <asp:GridView ID="Assigment" runat="server" EmptyDataText="There are no assigments">
         </asp:GridView>
     </form>
 </body>

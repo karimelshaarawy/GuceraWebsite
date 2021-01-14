@@ -15,7 +15,7 @@
         <p>
             <asp:Button ID="View" runat="server" Text="View Feedback" OnClick="View_Click" />
         </p>
-        <asp:GridView ID="Feedback" runat="server">
+        <asp:GridView ID="Feedback" runat="server" EmptyDataText="There is no feedbacks yet" OnSelectedIndexChanged="Feedback_SelectedIndexChanged">
         </asp:GridView>
         <p>
             <asp:Label ID="Label2" runat="server" Text=""></asp:Label>

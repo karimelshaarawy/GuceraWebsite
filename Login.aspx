@@ -45,11 +45,11 @@
     <form id="form1" runat="server">
         <div>
             <h1 style="text-align:center">Login</h1>
-        </div>
+        <%--</div>--%>
         ID&nbsp;
         <asp:TextBox ID="username" runat="server" CssClass="auto-style2"></asp:TextBox>
         <p>
-            password<asp:TextBox ID="password" runat="server" CssClass="auto-style3"></asp:TextBox>
+            password<asp:TextBox ID="password" runat="server" CssClass="auto-style3" OnTextChanged="password_TextChanged"></asp:TextBox>
         </p>
         <asp:Button ID="Button1" runat="server" CssClass="auto-style4" Text="login" OnClick="submit" />
         <p>

@@ -22,8 +22,8 @@ namespace Gucera
             SqlConnection conn = new SqlConnection(connstr);
             conn.InfoMessage += new SqlInfoMessageEventHandler(OnInfoMessage);
 
-            try
-            {
+           
+            
                 SqlCommand addCourseProc = new SqlCommand("InstAddCourse", conn);
                 int id = (int)Session["user"];
                 int credit = Int16.Parse(Credit_hours.Text);
@@ -33,18 +33,14 @@ namespace Gucera
                 addCourseProc.Parameters.Add(new SqlParameter("@name", Name.Text));
                 addCourseProc.Parameters.Add(new SqlParameter("@price", priceNum));
                 addCourseProc.Parameters.Add(new SqlParameter("@instructorId ", id));
+
                 conn.Open();
                 Label4.Text = "Course added succesfully";
                 addCourseProc.ExecuteNonQuery();
-            }
-            catch (Exception)
-            {
-                Label4.Text = "Error happened";
-            }
-            finally
-            {
+            
+           
                 conn.Close();
-            }
+           
 
 
 

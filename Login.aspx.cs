@@ -56,5 +56,10 @@ namespace Gucera
 
 
         }
+
+        protected void password_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -35,6 +35,7 @@ namespace Gucera
                 addCourseProc.Parameters.Add(new SqlParameter("@fullGrade", fullgradeInt));
                 addCourseProc.Parameters.Add(new SqlParameter("@number", number));
                 addCourseProc.Parameters.Add(new SqlParameter("@cid", cid));
+                addCourseProc.Parameters.Add(new SqlParameter("@weight", weightInt));
                 addCourseProc.Parameters.Add(new SqlParameter("@instId", id));
                 addCourseProc.Parameters.Add(new SqlParameter("@deadline", deadline.Text));
                 addCourseProc.Parameters.Add(new SqlParameter("@content", content.Text));

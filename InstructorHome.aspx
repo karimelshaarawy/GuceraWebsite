@@ -17,6 +17,11 @@
             font-size:2em;
             color:brown;
         }  
+        .auto-style1 {
+            position: absolute;
+            top: 78px;
+            left: 267px;
+        }
     </style>
 </head>
 <body>
@@ -30,6 +35,7 @@
         <asp:Button ID="grade_assigment" runat="server" Text="grade assigments" onclick="grade_assigment_Click"/>
         <asp:Button ID="view_feedback" runat="server" Text="view feedback" onclick="view_feedback_Click"/>
         <asp:Button ID="issue_certificate" runat="server" Text="issue certificate" onclick="issue_certificate_Click"/>
+        <asp:Button ID="add_num" runat="server" CssClass="auto-style1" OnClick="add_num_Click" style="z-index: 1" Text="add mobile number" />
     </form>
 </body>
 </html>

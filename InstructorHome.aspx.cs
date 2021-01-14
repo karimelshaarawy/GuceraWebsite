@@ -16,35 +16,41 @@ namespace Gucera
 
         protected void addCourse_click(object sender, EventArgs e)
         {
-            Response.Redirect("AddCourse");
+            Response.Redirect("AddCourse.aspx");
         }
 
 
         protected void define_assigment_Click(object sender, EventArgs e)
         {
-            Response.Redirect("DefineAssignmentOfCourseOfCertianType");
+            Response.Redirect("DefineAssignmentOfCourseOfCertianType.aspx");
 
         }
 
         protected void view_assigment_Click(object sender, EventArgs e)
         {
-            Response.Redirect("viewAssignment");
+            Response.Redirect("viewAssignment.aspx");
 
         }
 
         protected void grade_assigment_Click(object sender, EventArgs e)
         {
-            Response.Redirect("InstructorgradeAssignmentOfAStudent");
+            Response.Redirect("InstructorgradeAssignmentOfAStudent.aspx");
         }
 
         protected void view_feedback_Click(object sender, EventArgs e)
         {
-            Response.Redirect("ViewFeedbacksAddedByStudentsOnMyCourse");
+            Response.Redirect("ViewFeedbacksAddedByStudentsOnMyCourse.aspx");
         }
 
         protected void issue_certificate_Click(object sender, EventArgs e)
         {
-            Response.Redirect("InstructorgradeAssignmentOfAStudent");
+            Response.Redirect("InstructorIssueCertificateToStudent.aspx");
+        }
+
+        protected void add_num_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("addMobileNumber.aspx");
+
         }
     }
 }
